@@ -26,7 +26,7 @@ router.post('/send', function(req, res){
     to: 'odekyc@gmail.com', // list of receivers
     subject: 'Website Submission', // Subject line
     text: 'You have  a submission with the following details....Name: '+req.body.name +' Email: '+req.body.email+' Message: '+ req.body.message, // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
+    html: '<p>You have  a submission with the following details....</p><ul><li>Name: '+req.body.name +'</li><li>Email: '+req.body.email+'</li><li>Message: '+ req.body.message+'</li></ul>' // html body
 };
 
 transporter.sendMail(mailOptions, function(error, info){

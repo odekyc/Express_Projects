@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+    script(src='/javascripts/bootstrap.js')
+  body
+    include ./includes/nav.jade
+    include ./includes/showcase.jade
+    .container
+      block content
+      hr
+      footer
+        p © 2015 Company, Inc.
+    // /container
+

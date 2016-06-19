@@ -16,5 +16,11 @@
        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget placerat libero, vel tempor eros. Quisque auctor sed augue in porta. Cras eleifend malesuada mauris, sit amet pulvinar felis accumsan sit amet. Nam non arcu egestas, congue enim sit amet, porta mi. Donec mollis efficitur sapien eget imperdiet. Integer dapibus nunc ligula, vitae cursus nulla sagittis nec. Nullam euismod diam quis augue bibendum, vel imperdiet nisl porta. Vestibulum eu sodales lectus. Vestibulum vehicula sit amet leo vitae feugiat. In dictum consectetur libero, sit amet pulvinar enim vulputate vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed diam erat, vestibulum feugiat neque ut, imperdiet gravida eros. Praesent nec arcu volutpat, malesuada felis ac, facilisis augue. Phasellus ac imperdiet quam, molestie elementum nunc. Vestibulum id rutrum nisi.",
        "price_range": "$75 - $100"
 
+   },
+   {
+       "name":"Network Services",
+       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget placerat libero, vel tempor eros. Quisque auctor sed augue in porta. Cras eleifend malesuada mauris, sit amet pulvinar felis accumsan sit amet. Nam non arcu egestas, congue enim sit amet, porta mi. Donec mollis efficitur sapien eget imperdiet. Integer dapibus nunc ligula, vitae cursus nulla sagittis nec. Nullam euismod diam quis augue bibendum, vel imperdiet nisl porta. Vestibulum eu sodales lectus. Vestibulum vehicula sit amet leo vitae feugiat. In dictum consectetur libero, sit amet pulvinar enim vulputate vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed diam erat, vestibulum feugiat neque ut, imperdiet gravida eros. Praesent nec arcu volutpat, malesuada felis ac, facilisis augue. Phasellus ac imperdiet quam, molestie elementum nunc. Vestibulum id rutrum nisi.",
+       "price_range": "$500 - $1000"
+
    }
 ]

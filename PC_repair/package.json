@@ -14,6 +14,7 @@
     "morgan": "~1.7.0",
     "nodemailer": "*",
     "nodemon": "^1.9.2",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "nodemailer": "*"
   }
 }

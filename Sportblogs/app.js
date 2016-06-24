@@ -24,7 +24,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
+app.locals.moment=require('moment');
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -34,14 +34,17 @@ app.use(cookieParser('secret'));
 app.use(session({cookie: { maxAge: 60000 }}));
 app.use(flash());
 
+
 app.use(session({
   secret: 'secret_key',
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: true }
+  cookie: { maxAge:60000,secure: true }
 }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+
+
 
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {

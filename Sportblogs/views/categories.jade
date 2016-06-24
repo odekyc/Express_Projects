@@ -10,4 +10,4 @@ block content
     ul(class='list-group')
      each category, i in categories
       li(class='list-group-item')
-       a(href='/articles/category/1') #{category.title}
+       a(href='/articles/category/#{category._id}') #{category.title}

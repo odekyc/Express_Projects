@@ -11,7 +11,7 @@ var flash = require('connect-flash');
 var mongoose=require('mongoose');
 
 //Mongoose Connect
-mongoose.connect('mongodb://localhost/sportblog');
+mongoose.connect('mongodb://localhost/sportsblog');
 var db=mongoose.connection;
 
 var routes = require('./routes/index');
@@ -30,21 +30,9 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', routes);
-app.use('/articles', articles );
-app.use('/categories', categories );
-app.use('/manage', manage );
-
-
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
-});
+app.use(cookieParser('secret'));
+app.use(session({cookie: { maxAge: 60000 }}));
+app.use(flash());
 
 app.use(session({
   secret: 'secret_key',
@@ -52,6 +40,8 @@ app.use(session({
   saveUninitialized: true,
   cookie: { secure: true }
 }));
+
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
@@ -75,6 +65,20 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
+
+app.use('/', routes);
+app.use('/articles', articles );
+app.use('/categories', categories );
+app.use('/manage', manage );
+
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
 // error handlers
 
 // development error handler

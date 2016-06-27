@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Passport Login</title>
+        <link rel="stylesheet" href='/stylesheets/style.css'>
+        <link rel="stylesheet" href='/stylesheets/bootstrap.css'>
+    </head>
+    <body>
+   
+       <div class="container">
+           {{{messages}}}
+       {{#if errors}}
+          {{#each errors}}
+              <div class="alert alert-danger">{{msg}}</div>
+          {{/each}}
+       {{/if}}
+       {{{body}}}
+       </div>
+    <script src='/javascripts/bootstrap.js'></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    </body>
+</html>
